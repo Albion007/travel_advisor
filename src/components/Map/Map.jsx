@@ -13,12 +13,12 @@ const Map = ({ setCoordinates, setBounds, coordinates, places, setChildClicked }
   const isDesktop = useMediaQuery('(min-width:600px)');
 
 
-  let gapi = window.gapi
+  var gapi = window.gapi
 
-  const CLIENT_ID = "191560946240-uk7u7b6iceusprd60pq7khl8r5kq4buf.apps.googleusercontent.com";
-  const API_KEY = "AIzaSyDuwtC_l4ZMEaQPTSirUq5kbJJu9R_JT3o";
-  const DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"]
-  const SCOPES = "https://www.googleapis.com/auth/calendar.events"
+  var CLIENT_ID = "191560946240-uk7u7b6iceusprd60pq7khl8r5kq4buf.apps.googleusercontent.com";
+  var API_KEY = "AIzaSyDuwtC_l4ZMEaQPTSirUq5kbJJu9R_JT3o";
+  var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"]
+  var SCOPES = "https://www.googleapis.com/auth/calendar.events"
 
 
 
@@ -64,7 +64,7 @@ const Map = ({ setCoordinates, setBounds, coordinates, places, setChildClicked }
                 {'method': 'popup', 'minutes': 10}
               ]
             }
-          };
+          }
 
           var request = gapi.client.calendar.events.insert({
             'calendarId': 'primary',
@@ -129,7 +129,7 @@ const Map = ({ setCoordinates, setBounds, coordinates, places, setChildClicked }
                     alt={place.name}
                   />
                   <Rating name="read-only" size="small" value={Number(place.rating)} readOnly />
-                  <button onClick={handleClick}>Add Event</button>
+                  <button onClick={handleClick}>Add Eventt</button>
                 </Paper>
               )
             }
