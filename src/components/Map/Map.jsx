@@ -96,7 +96,7 @@ const Map = ({ setCoordinates, setBounds, coordinates, places, setChildClicked }
   return (
     <div className={classes.mapContainer}>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: 'AIzaSyDt8N4Xt8NiJvJY91RxzP5ufx2K9Xt4KtY' }}
+        bootstrapURLKeys={{ key: 'AIzaSyAwFgXbWtyj5dHR8X6ptCcfgsvExhB_Wm4' }}
         defaultCenter={coordinates}
         center={coordinates}
         defaultZoom={14}
@@ -129,7 +129,7 @@ const Map = ({ setCoordinates, setBounds, coordinates, places, setChildClicked }
                     alt={place.name}
                   />
                   <Rating name="read-only" size="small" value={Number(place.rating)} readOnly />
-                  <button onClick={handleClick}>Add Eventt</button>
+                  <button onClick={handleClick}>Add Event</button>
                 </Paper>
               )
             }
